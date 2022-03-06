@@ -1,0 +1,39 @@
+---
+title: "Assessment 1"
+author: "Mungunchimeg Batbayar s4662982"
+date: '2022-03-05'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# **RMarkdown editing**
+R Markdown is used for creating efficient records of data analysis. R Markdown has 2 steps:
+
+**1.** *Creation*:To create an RMarkdown file (.rmd), you use conventional Markdown syntax
+alongside chunks of code written in R 
+
+**2.** *Knit*: the Markdown formatting and the R code are evaluated, and an output file (HTML, PDF, etc) is produced.
+
+Resource: [Click here](https://ourcodingclub.github.io/tutorials/rmarkdown/)
+
+This is link the how to insert the link in the .rmd file [Click here](https://rmarkdown.rstudio.com/lesson-8.html)
+
+
+## **Load the packages and dataset**
+
+```{r}
+#install.packages("tidyverse")
+library(tidyverse)
+library(knitr)
+
+fastfood <- read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2018/2018-09-04/fastfood_calories.csv")
+
+head(fastfood, 10)
+
+kable(fastfood[1:10, 1:5])
+```
+
+

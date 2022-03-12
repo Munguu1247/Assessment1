@@ -201,13 +201,13 @@ trans_fat_per <- fastfood %>%
 #Use facets, coordinates and theme layers to make your data viz visually appealing and meaningful.
 
 
-trans_fat_per %>%
-  ggplot(aes(restaurant, trans_fat_percent)) +
-  geom_point(colour = "purple") +
+fastfood %>%
+  ggplot(aes(restaurant, trans_fat)) +
+  geom_col(colour = "purple") +
   facet_wrap(~restaurant) +
   coord_flip() +
   theme_bw() +
-  labs(x = NULL, y = 'Percentage of trant fat',
+  labs(x = NULL, y = 'Trans fat',
        title = "DISTRIBUTION OF TRANS FAT EACH RESTAURANT", caption = "Figure 4")
 
 

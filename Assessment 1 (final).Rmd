@@ -9,9 +9,9 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-**PART 1**
+#**PART 1**
 
-*RMarkdown editing*
+##*RMarkdown editing*
 
 R Markdown is used for creating efficient records of data analysis. R Markdown has 2 steps:
 
@@ -26,7 +26,7 @@ This is link the how to insert the link in the .rmd file [Click        here](htt
 
 
 
-*Load the packages and data set*
+##*Load the packages and data set*
 
 
 ```{r}
@@ -43,7 +43,7 @@ kable(fastfood[1:10, 1:5])
 
 
 
-**PART 2**
+#**PART 2**
 
 ```{r}
 #install.packages("tidyverse")
@@ -55,7 +55,7 @@ library(skimr)
 ```
 
 
-**Task-8**
+#**Task-8**
 
 ```{r}
 fastfood %>%
@@ -64,7 +64,7 @@ fastfood %>%
 ```
 
 
-**Task-9**
+#**Task-9**
 
 ```{r}
 dont_eat_this <- fastfood %>%
@@ -74,7 +74,7 @@ dont_eat_this <- fastfood %>%
 ```
 
 
-**Task-10**
+#**Task-10**
 
 ```{r}
 heavy_food <- fastfood %>%
@@ -83,7 +83,7 @@ heavy_food <- fastfood %>%
 
 
 
-**Task-11**
+#**Task-11**
 
 ```{r}
 library(skimr)
@@ -91,7 +91,7 @@ skim(fastfood)
 ```
 
 
-**Task-12**
+#**Task-12**
 
 ```{r}
 fastfood %>%
@@ -100,7 +100,7 @@ fastfood %>%
 ```
 
 
-**Task-13**
+#**Task-13**
 
 ```{r}
 fastfood %>%
@@ -110,9 +110,9 @@ fastfood %>%
 ```
 
 
-**Task-14**
+#**Task-14**
 
-*1.The average calories of each restaurant*
+#*1.The average calories of each restaurant*
 ```{r}
 average_calories <- fastfood %>%
   group_by(restaurant) %>%
@@ -123,7 +123,7 @@ average_calories <- fastfood %>%
 ```
 
 
-*2.The maximum total fat of each restaurant*
+#*2.The maximum total fat of each restaurant*
 
 ```{r}
 max_fat <- fastfood %>%
@@ -134,7 +134,7 @@ max_fat <- fastfood %>%
 ```
 
 
-*3.The minimum cholesterol of each restaurant*
+#*3.The minimum cholesterol of each restaurant*
 ```{r}
 min_cholesterol <- fastfood %>%
   group_by(restaurant) %>%
@@ -145,7 +145,7 @@ min_cholesterol <- fastfood %>%
 
 
   
-**Task-15**
+#**Task-15**
 
 Total fat of each restaurant:
 
@@ -157,7 +157,9 @@ total_fat_per_restaurant <- fastfood %>%
   arrange(total_fat)
 ```
 
-#Figure 1a and Figure 1b show the total fat per restaurant. Based on 2 variables which are one discrete and another is continuous, goem_col() function is chosen in Figure 1a,  and geom_point function with geom_line is chosen in Figure 1b. In addition, text label and reorder functions are used.
+#Figure 1a and Figure 1b show the total fat per restaurant. 
+#Based on 2 variables which are one discrete and another is continuous, goem_col() function is chosen in Figure 1a,  and geom_point function with geom_line is chosen in Figure 1b. 
+#In addition, text label and reorder functions are used.
 
 ```{r}
 total_fat_per_restaurant %>%
@@ -183,7 +185,7 @@ total_fat_per_restaurant %>%
 ```
 
 
-**Task-16**
+#**Task-16**
 
 ```{r}
 new_fastfood <- fastfood %>%
@@ -193,7 +195,7 @@ new_fastfood$salad <- NULL
 ```
 
 
-**Task-17**
+#**Task-17**
 
 ```{r}
 Mcdonalds <- fastfood %>%
@@ -213,9 +215,9 @@ Mcdonalds %>%
  
  
 
-**PART 3**
+#**PART 3**
 
-**Task-18**
+#**Task-18**
 
 ```{r}
 skim(fastfood)
@@ -229,7 +231,7 @@ fastfood %>%
   count(item)
 ```
 
-**Task-19**
+#**Task-19**
 
 ```{r}
 updated_fastfood <- fastfood %>%
@@ -239,7 +241,7 @@ updated_fastfood <- fastfood %>%
 
   
   
-**Task-20**
+#**Task-20**
 
 ```{r}
 ggplot(updated_fastfood, aes(calories_type, calories)) +
@@ -251,7 +253,7 @@ ggplot(updated_fastfood, aes(calories_type, calories)) +
 ```
 
 
-**Task-21**
+#**Task-21**
 
 ```{r}
 trans_fat_per <- fastfood %>%
@@ -262,7 +264,7 @@ trans_fat_per <- fastfood %>%
 ```
 
 
-**Task-22**
+#**Task-22**
 
 ```{r}
 trans_fat_per %>%
@@ -276,7 +278,7 @@ trans_fat_per %>%
 ```
 
 
-**Task-23**
+#**Task-23**
 
 ```{r}
 fastfood %>%
@@ -287,7 +289,7 @@ fastfood %>%
 ```
 
 
-**Task-24**
+#**Task-24**
 
 ```{r}
 fastfood %>%
